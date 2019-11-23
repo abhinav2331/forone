@@ -1,0 +1,26 @@
+﻿{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowJs": true,
+    "noImplicitAny": false,
+    "module": "esnext",
+    "noEmitOnError": true,
+    "removeComments": false,
+    "sourceMap": true,
+    "target": "es5",
+    "esModuleInterop": true,
+    "jsx": "react",
+    "lib": [ "es2015", "dom" ],
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "preserveConstEnums": true
+  },
+  "exclude": [
+    "node_modules"
+  ],
+  "files": [
+    "app/main.tsx"
+  ]
+}

@@ -1,0 +1,472 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <Name>MarketingPunchAdmin.Web</Name>
+    <RootNamespace>MarketingPunchAdmin.Web</RootNamespace>
+    <LastActiveSolutionConfig>Debug|Any CPU</LastActiveSolutionConfig>
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+    <EnableTypeScript>true</EnableTypeScript>
+    <TypeScriptSourceMap>true</TypeScriptSourceMap>
+    <TypeScriptModuleKind>CommonJS</TypeScriptModuleKind>
+    <ToolsVersionPromptShown>3.0</ToolsVersionPromptShown>
+    <TypeScriptToolsVersion>3.0</TypeScriptToolsVersion>
+    <NameOfLastUsedPublishProfile>Staging Admin - FTP</NameOfLastUsedPublishProfile>
+    <ExcludeFoldersFromDeployment>node_modules</ExcludeFoldersFromDeployment>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>b139eac7-2044-45d2-aaba-03c051840db5</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>server\server.js</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <NodejsPort>1337</NodejsPort>
+    <StartWebBrowser>True</StartWebBrowser>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Scripts\bootstrap-material-design.js" />
+    <Compile Include="Scripts\jquery.min.js" />
+    <Compile Include="scripts\material-dashboard.js" />
+    <Compile Include="scripts\perfect-scrollbar.js" />
+    <Compile Include="Scripts\popper.min.js" />
+    <Compile Include="server\routes\affiliateRoutes.js" />
+    <Compile Include="server\routes\leadGenerationRoutes.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="server\routes\shared.js" />
+    <Compile Include="server\routes\configurationRoutes.js" />
+    <Compile Include="server\routes\userManagementRoutes.js" />
+    <Compile Include="server\server.js" />
+    <Compile Include="webpack-development-config.js" />
+    <Compile Include="webpack-production-config.js" />
+    <Content Include=".env" />
+    <Content Include="app\shared\demo-thumb.jpg" />
+    <Content Include="css\data-tables.less" />
+    <Content Include="css\mainStyle.css" />
+    <Content Include="css\material-dashboard.css" />
+    <Content Include="css\mp-custom.less" />
+    <Content Include="images\apple-icon.png" />
+    <Content Include="images\arrow-down.png" />
+    <Content Include="images\bg-pricing.jpg" />
+    <Content Include="images\bg3.jpg" />
+    <Content Include="images\bg9.jpg" />
+    <Content Include="images\card-1.jpeg" />
+    <Content Include="images\card-1.jpg" />
+    <Content Include="images\card-2.jpeg" />
+    <Content Include="images\card-2.jpg" />
+    <Content Include="images\card-3.jpeg" />
+    <Content Include="images\card-3.jpg" />
+    <Content Include="images\check.png" />
+    <Content Include="images\close.png" />
+    <Content Include="images\default-avatar.png" />
+    <Content Include="images\demo-thumb.jpg" />
+    <Content Include="images\favicon.png" />
+    <Content Include="images\header-doc.jpg" />
+    <Content Include="images\image_placeholder.jpg" />
+    <Content Include="images\loader.gif" />
+    <Content Include="images\lock.jpg" />
+    <Content Include="images\login.jpg" />
+    <Content Include="images\mask.png" />
+    <Content Include="images\new_logo.png" />
+    <Content Include="images\placeholder.jpg" />
+    <Content Include="images\product1.jpg" />
+    <Content Include="images\product2.jpg" />
+    <Content Include="images\product3.jpg" />
+    <Content Include="images\register.jpg" />
+    <Content Include="images\sidebar-1.jpg" />
+    <Content Include="images\sidebar-2.jpg" />
+    <Content Include="images\sidebar-3.jpg" />
+    <Content Include="images\sidebar-4.jpg" />
+    <Content Include="images\sydney.jpg" />
+    <Content Include="server\views\error.ejs">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="images\flags\LS.png" />
+    <Content Include="images\flags\LU.png" />
+    <Content Include="images\flags\LV.png" />
+    <Content Include="images\flags\MG.png" />
+    <Content Include="images\flags\MK.png" />
+    <Content Include="images\flags\ML.png" />
+    <Content Include="images\flags\MM.png" />
+    <Content Include="images\flags\MT.png" />
+    <Content Include="images\flags\MX.png" />
+    <Content Include="images\flags\NA.png" />
+    <Content Include="images\flags\NE.png" />
+    <Content Include="images\flags\NG.png" />
+    <Content Include="images\flags\NI.png" />
+    <Content Include="images\flags\NL.png" />
+    <Content Include="images\flags\NO.png" />
+    <Content Include="images\flags\OM.png" />
+    <Content Include="images\flags\PA.png" />
+    <Content Include="images\flags\PE.png" />
+    <Content Include="images\flags\PG.png" />
+    <Content Include="images\flags\PK.png" />
+    <Content Include="images\flags\PL.png" />
+    <Content Include="images\flags\PT.png" />
+    <Content Include="images\flags\PY.png" />
+    <Content Include="images\flags\QA.png" />
+    <Content Include="images\flags\RO.png" />
+    <Content Include="images\flags\RU.png" />
+    <Content Include="images\flags\RW.png" />
+    <Content Include="images\flags\SA.png" />
+    <Content Include="images\flags\SE.png" />
+    <Content Include="images\flags\SG.png" />
+    <Content Include="images\flags\SL.png" />
+    <Content Include="images\flags\SN.png" />
+    <Content Include="images\flags\SO.png" />
+    <Content Include="images\flags\SV.png" />
+    <Content Include="images\flags\TD.png" />
+    <Content Include="images\flags\TJ.png" />
+    <Content Include="images\flags\TL.png" />
+    <Content Include="images\flags\TR.png" />
+    <Content Include="images\flags\TZ.png" />
+    <Content Include="images\flags\UA.png" />
+    <Content Include="images\flags\US.png" />
+    <Content Include="images\flags\VE.png" />
+    <Content Include="images\flags\VN.png" />
+    <Content Include="images\flags\YE.png" />
+    <Content Include="server\views\index.ejs">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="server\views\login.ejs">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="package.json" />
+    <Content Include="README.md" />
+    <Content Include="tsconfig.json" />
+    <Content Include="typings.json" />
+    <Content Include="typings\globals\axios\typings.json" />
+    <Content Include="typings\globals\node\typings.json" />
+    <Content Include="typings\modules\react\typings.json" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="app\" />
+    <Folder Include="app\components\" />
+    <Folder Include="app\components\affiliate\reports\" />
+    <Folder Include="app\components\affiliate\reports\report\" />
+    <Folder Include="app\components\affiliate\reports\stores\" />
+    <Folder Include="app\components\leadgeneration\" />
+    <Folder Include="app\components\leadgeneration\exittraffic\" />
+    <Folder Include="app\components\leadgeneration\exittraffic\campaign\" />
+    <Folder Include="app\components\leadgeneration\exittraffic\stores\" />
+    <Folder Include="app\components\leadgeneration\questionblocks\" />
+    <Folder Include="app\components\leadgeneration\questionblocks\questionblock\" />
+    <Folder Include="app\components\affiliate\" />
+    <Folder Include="app\components\users\" />
+    <Folder Include="app\components\users\user\" />
+    <Folder Include="app\components\users\stores\" />
+    <Folder Include="app\model\" />
+    <Folder Include="app\shared\" />
+    <Folder Include="app\shared\filterelements\" />
+    <Folder Include="app\shared\formelement\" />
+    <Folder Include="app\shared\notification\" />
+    <Folder Include="css\" />
+    <Folder Include="fonts\" />
+    <Folder Include="images\" />
+    <Folder Include="images\flags\" />
+    <Folder Include="scripts\" />
+    <Folder Include="server\routes\" />
+    <Folder Include="server\views\" />
+    <Folder Include="server\" />
+    <Folder Include="typings\" />
+    <Folder Include="typings\globals\" />
+    <Folder Include="typings\globals\axios\" />
+    <Folder Include="typings\globals\node\" />
+    <Folder Include="typings\modules\" />
+    <Folder Include="typings\modules\react\" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="app\App.tsx">
+      <SubType>Code</SubType>
+      <Publish>True</Publish>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="app\components\affiliate\reports\affiliates.list.component.tsx">
+      <SubType>Code</SubType>
+      <Publish>True</Publish>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="app\components\affiliate\reports\registration.cost.report.component.tsx">
+      <Publish>True</Publish>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="app\components\affiliate\reports\report\affiliates.edit.tsx">
+      <SubType>Code</SubType>
+      <Publish>True</Publish>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="app\components\affiliate\reports\report\roi.edit.tsx" />
+    <TypeScriptCompile Include="app\components\affiliate\reports\roi.manager.component.tsx" />
+    <TypeScriptCompile Include="app\components\affiliate\reports\stores\reportstore.service.tsx">
+      <Publish>True</Publish>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="app\components\leadgeneration\exittraffic\campaigns.list.component.tsx">
+      <Publish>True</Publish>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="app\components\leadgeneration\exittraffic\campaign\campaign.categories.tsx">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="app\components\leadgeneration\exittraffic\campaign\campaign.image.upload.tsx">
+      <Publish>True</Publish>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="app\components\leadgeneration\exittraffic\campaign\campaign.edit.tsx">
+      <Publish>True</Publish>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="app\components\leadgeneration\exittraffic\campaign\category.edit.tsx">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="app\components\leadgeneration\exittraffic\campaign\import.offer.tsx">
+      <Publish>True</Publish>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="app\components\leadgeneration\exittraffic\stores\campaign.categories.service.tsx">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="app\components\leadgeneration\exittraffic\stores\campaign.service.tsx">
+      <Publish>True</Publish>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="app\components\leadgeneration\exittraffic\stores\importoffer.service.tsx">
+      <Publish>True</Publish>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="app\components\affiliate\reports\stores\reportstore.service.tsx" />
+    <TypeScriptCompile Include="app\components\leadgeneration\exittraffic\campaigns.list.component.tsx" />
+    <TypeScriptCompile Include="app\components\leadgeneration\exittraffic\campaign\campaign.image.upload.tsx" />
+    <TypeScriptCompile Include="app\components\leadgeneration\exittraffic\campaign\campaign.edit.tsx" />
+    <TypeScriptCompile Include="app\components\leadgeneration\exittraffic\campaign\campaign.revenue.create.tsx" />
+    <TypeScriptCompile Include="app\components\leadgeneration\exittraffic\campaign\campaign.revenue.edit.tsx" />
+    <TypeScriptCompile Include="app\components\leadgeneration\exittraffic\campaign\campaign.revenue.tsx" />
+    <TypeScriptCompile Include="app\components\leadgeneration\exittraffic\campaign\import.offer.tsx" />
+    <TypeScriptCompile Include="app\components\leadgeneration\exittraffic\stores\campaign.service.tsx" />
+    <TypeScriptCompile Include="app\components\leadgeneration\exittraffic\stores\importoffer.service.tsx" />
+    <TypeScriptCompile Include="app\components\leadgeneration\questionblocks\question.block.campaign.component.tsx" />
+    <TypeScriptCompile Include="app\components\leadgeneration\questionblocks\questionblock\campaign.name.tab.tsx" />
+    <TypeScriptCompile Include="app\components\leadgeneration\questionblocks\questionblock\campaign.versions.tab.tsx" />
+    <TypeScriptCompile Include="app\components\leadgeneration\questionblocks\questionblock\version.creatives.tsx" />
+    <TypeScriptCompile Include="app\components\users\stores\users.service.tsx">
+      <SubType>Code</SubType>
+      <Publish>True</Publish>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="app\components\users\users.component.tsx">
+      <SubType>Code</SubType>
+      <Publish>True</Publish>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="app\components\users\user\user.edit.tsx">
+      <SubType>Code</SubType>
+      <Publish>True</Publish>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="app\model\affiliate.model.tsx">
+      <SubType>Code</SubType>
+      <Publish>True</Publish>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="app\model\campaign.model.tsx">
+      <SubType>Code</SubType>
+      <Publish>True</Publish>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="app\login.tsx">
+      <Publish>True</Publish>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="app\main.tsx">
+      <SubType>Code</SubType>
+      <Publish>True</Publish>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="app\model\campaign.revenue.model.tsx">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="app\shared\api.service.tsx">
+      <Publish>True</Publish>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="app\shared\filterelements\date.picker.input.filter.tsx">
+      <Publish>True</Publish>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="app\shared\filterelements\radio.button.filter.tsx">
+      <Publish>True</Publish>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="app\shared\filterelements\select.websiteid.filter.tsx">
+      <Publish>True</Publish>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="app\shared\filterelements\select.dropdown.no.placeholder.filter.tsx">
+      <Publish>True</Publish>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="app\shared\filterelements\select.dropdown.filter.tsx">
+      <Publish>True</Publish>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="app\shared\filterelements\select.dropdown.filter.simple.tsx">
+      <Publish>True</Publish>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="app\shared\filterelements\simple.input.field.tsx">
+      <Publish>True</Publish>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="app\shared\filterelements\traffic.campaigns.tsx">
+      <Publish>True</Publish>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="app\shared\formelement\input.date.tsx" />
+    <TypeScriptCompile Include="app\shared\formelement\input.group.tsx">
+      <Publish>True</Publish>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="app\shared\formelement\input.normal.tsx">
+      <Publish>True</Publish>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="app\shared\formelement\input.normal.unrequired.tsx">
+      <Publish>True</Publish>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="app\shared\formelement\radio.checkbox.tsx">
+      <Publish>True</Publish>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="app\shared\formelement\radio.checkbox.inline.tsx">
+      <Publish>True</Publish>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="app\shared\formelement\select.has.offers.tracking.tsx">
+      <Publish>True</Publish>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="app\shared\formelement\select.network.id.tsx">
+      <Publish>True</Publish>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="app\shared\formelement\select.normal.tsx">
+      <Publish>True</Publish>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="app\shared\formelement\select.normal.unrequired.tsx">
+      <Publish>True</Publish>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="app\shared\formelement\select.formelement.tsx" />
+    <TypeScriptCompile Include="app\shared\formelement\select.publisher.id.tsx">
+      <Publish>True</Publish>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="app\shared\formelement\select.status.id.tsx">
+      <Publish>True</Publish>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="app\shared\formelement\select.type.id.tsx">
+      <Publish>True</Publish>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="app\shared\formelement\select.type.import.offer.tsx">
+      <Publish>True</Publish>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="app\shared\formelement\textarea.tsx">
+      <Publish>True</Publish>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="app\shared\api.service.tsx" />
+    <TypeScriptCompile Include="app\shared\filterelements\date.picker.input.filter.tsx" />
+    <TypeScriptCompile Include="app\shared\filterelements\radio.button.filter.tsx" />
+    <TypeScriptCompile Include="app\shared\filterelements\select.websiteid.filter.tsx" />
+    <TypeScriptCompile Include="app\shared\filterelements\select.dropdown.no.placeholder.filter.tsx" />
+    <TypeScriptCompile Include="app\shared\filterelements\select.dropdown.filter.tsx" />
+    <TypeScriptCompile Include="app\shared\filterelements\select.dropdown.filter.simple.tsx" />
+    <TypeScriptCompile Include="app\shared\filterelements\simple.input.field.tsx" />
+    <TypeScriptCompile Include="app\shared\filterelements\traffic.campaigns.tsx" />
+    <TypeScriptCompile Include="app\shared\formelement\input.group.tsx" />
+    <TypeScriptCompile Include="app\shared\formelement\input.normal.tsx" />
+    <TypeScriptCompile Include="app\shared\formelement\input.normal.unrequired.tsx" />
+    <TypeScriptCompile Include="app\shared\formelement\input.numeric.tsx">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="app\shared\formelement\radio.checkbox.tsx" />
+    <TypeScriptCompile Include="app\shared\formelement\radio.checkbox.inline.tsx" />
+    <TypeScriptCompile Include="app\shared\formelement\select.has.offers.tracking.tsx" />
+    <TypeScriptCompile Include="app\shared\formelement\select.network.id.tsx" />
+    <TypeScriptCompile Include="app\shared\formelement\select.normal.tsx" />
+    <TypeScriptCompile Include="app\shared\formelement\select.normal.unrequired.tsx" />
+    <TypeScriptCompile Include="app\shared\formelement\select.publisher.id.tsx" />
+    <TypeScriptCompile Include="app\shared\formelement\select.status.id.tsx" />
+    <TypeScriptCompile Include="app\shared\formelement\select.type.id.tsx" />
+    <TypeScriptCompile Include="app\shared\formelement\select.type.import.offer.tsx" />
+    <TypeScriptCompile Include="app\shared\formelement\textarea.normal.tsx">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="app\shared\formelement\textarea.tsx" />
+    <TypeScriptCompile Include="app\shared\handle.error.tsx">
+      <SubType>Code</SubType>
+      <Publish>True</Publish>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="app\shared\notification\affiliate.create.notification.tsx">
+      <SubType>Code</SubType>
+      <Publish>True</Publish>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="app\shared\notification\affiliate.edit.notification.tsx">
+      <SubType>Code</SubType>
+      <Publish>True</Publish>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="app\shared\notification\campaign.add.creative.notification.tsx">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="app\shared\notification\campaign.create.notification.tsx" />
+    <TypeScriptCompile Include="app\shared\notification\campaign.edit.notification.tsx" />
+    <TypeScriptCompile Include="app\shared\notification\campaign.revenue.notification.tsx" />
+    <TypeScriptCompile Include="app\shared\notification\category.notification.tsx">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="app\shared\notification\import.offers.notification.tsx" />
+    <TypeScriptCompile Include="app\shared\notification\password.reset.notification.tsx">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="app\shared\notification\users.notification.tsx">
+      <SubType>Code</SubType>
+      <Publish>True</Publish>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="server\routes\defaultRoutes.js">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="typings\globals\axios\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\node\index.d.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="typings\index.d.ts" />
+    <TypeScriptCompile Include="typings\modules\react\index.d.ts" />
+  </ItemGroup>
+  <!-- Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them. -->
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" />
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsTools.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48022/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="AddTsToContent" AfterTargets="CompileTypeScript" Condition="'$(BuildingProject)' != 'false'">
+    <ItemGroup>
+      <Content Include="@(TypeScriptCompile)" />
+    </ItemGroup>
+  </Target>
+</Project>

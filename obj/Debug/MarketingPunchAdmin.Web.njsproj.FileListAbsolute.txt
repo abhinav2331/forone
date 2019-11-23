@@ -1,0 +1,2 @@
+D:\Craig Cooke\Development-2\Control Centre\MarketingPunchAdmin.Web\obj\Debug\MarketingPunchAdmin.Web.njsproj.CoreCompileInputs.cache
+D:\Craig Cooke\Development-2\Control Centre\MarketingPunchAdmin.Web\bin\Microsoft.NodejsTools.WebRole.dll

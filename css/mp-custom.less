@@ -1,0 +1,51 @@
+@impelusGreen: #bad93d;
+@impelusGreenHighlight: #366766;
+@impelusGreenShadow: rgba(54, 103, 102, 0.4);
+@tableHeadersColor: #333;
+@tableHeadersFontWeight: 700;
+
+.card .card-header-rose .card-icon, .card .card-header-rose:not(.card-header-icon):not(.card-header-text), .card .card-header-rose .card-text {
+    box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px @impelusGreenShadow;
+}
+
+.card .card-header-rose .card-icon, .card .card-header-rose .card-text, .card .card-header-rose:not(.card-header-icon):not(.card-header-text), .card.bg-rose,
+.card.card-rotate.bg-rose .front, .card.card-rotate.bg-rose .back {
+    background: @impelusGreen;
+    h4
+
+{
+    font-weight: 700;
+}
+
+}
+
+.btn.btn-rose.btn-link {
+    color: @impelusGreen;
+    &:hover, &:active
+
+{
+    color: @impelusGreenHighlight;
+}
+
+}
+
+.form-control, .is-focused .form-control {
+    background-image: linear-gradient(to top,@impelusGreenHighlight 2px, rgba(156, 39, 176, 0) 2px), linear-gradient(to top, #d2d2d2 1px, rgba(210, 210, 210, 0) 1px);
+}
+
+.sidebar[data-color="rose"] li.active > a {
+    background-color: @impelusGreen;
+    box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px @impelusGreenShadow;
+    font-weight: 700;
+}
+
+
+.rt-th {
+    text-align: left;
+    color: @tableHeadersColor;
+    font-weight: @tableHeadersFontWeight;
+    box-shadow: 0 !important;
+    border-bottom: 6px solid #dddddd;
+}
+
+@import 'data-tables.less';

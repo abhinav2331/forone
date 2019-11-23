@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="/public/css/material-dashboard.css" />
+    <link rel="stylesheet" href="/public/css/mp-custom.less" />
+    <link rel="stylesheet" href="/public/css/mainStyle.css" />
+</head>
+<body class="off-canvas-sidebar login-page abhi">
+    <div id="root"></div>
+    <!-- scripts -->
+    <script src="/public/scripts/popper.min.js"></script>
+    <script src="/public/scripts/jquery.min.js"></script>
+    <script src="/public/scripts/bootstrap-material-design.js"></script>
+    <script src="/public/dist/login.entry.js"></script>
+
+    <script type="text/javascript">
+        $(function () {
+            setTimeout(function () {
+                // after 1000 ms we add the class animated to the login/register card
+                $('.card').removeClass('card-hidden');
+            }, 700)
+        });
+    </script>
+
+    <%if (loginFailed && loginFailed.length > 0) { %>
+    <script>
+        $(function () {
+            $(".login-result").show();
+        });
+    </script>
+    <% } %>
+    <%=loginFailed%>
+</body>
+</html>
